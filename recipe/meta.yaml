@@ -35,7 +35,7 @@ requirements:
     #- black >=23.9.1
     #- isort >=5.12.0
     #- flake8 >=6.1.0
-    - ruff >=0.6.3
+    - ruff >=0.6.2
     - django-upgrade >=1.20.0
     - djlint >=1.35.2
     - pre-commit >=3.8.0
