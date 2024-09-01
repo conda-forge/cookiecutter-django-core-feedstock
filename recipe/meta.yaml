@@ -1,5 +1,5 @@
-{% set name = "cookiecutter-django-core" %}
-{% set version = "2023.09.23" %}
+{% set name = "cookiecutter-django" %}
+{% set version = "2024.08.30" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,24 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 1a0c56f948a6a7f6b01c24e7cc13664f76e80724642bb1db12a5931d9bea7140
+  sha256: b09ba33a9e670b17094fcf3ccce19aa228dd085c560ac896ad515dae0fe7c63f
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python >=3.8
     - pip
+    - setuptools
   run:
-    - python >=3.8,<4.0
-# Django
-# ------------------------------------------------------------------------------
-    - django >=4.2.0,<5.0
+    - python >=3.8
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/requirements.txt
 # ------------------------------------------------------------------------------
-    - cookiecutter >=2.3.1
-    - sh >=2.0.6  # [unix]
+    - cookiecutter >=2.6.0
+    - sh >=2.0.7  # [unix]
     # Keep the package noarch but allow for the osx and linux only dep
     - __linux  # [linux]
     - __osx    # [osx]
@@ -34,37 +32,40 @@ requirements:
     - binaryornot >=0.4.4
 # Code quality
 # ------------------------------------------------------------------------------
-    - black >=23.9.1
-    - isort >=5.12.0
-    - flake8 >=6.1.0
-    - django-upgrade >=1.14.1
-    - djlint >=1.34.0
-    - pre-commit >=3.4.0
+    #- black >=23.9.1
+    #- isort >=5.12.0
+    #- flake8 >=6.1.0
+    - ruff >=0.6.3
+    - django-upgrade >=1.20.0
+    - djlint >=1.35.2
+    - pre-commit >=3.8.0
 # Testing
 # ------------------------------------------------------------------------------
-    - tox >=3.27.0
-    - pytest >=7.4.2
-    - pytest-xdist >=3.3.1
+    - tox >=4.18.0
+    - pytest >=8.3.2
+    - pytest-xdist >=3.6.1
     - pytest-cookies >=0.7.0
     - pytest-instafail >=0.5.0
-    - pyyaml >=6.0.1
+    - pyyaml >=6.0.2
 # Scripting
 # ------------------------------------------------------------------------------
-    - pygithub >=1.59.1
-    - gitpython >=3.1.37
-    - jinja2 >=3.1.2
-    - requests >=2.31.0
+    - pygithub >=2.4.0
+    - gitpython >=3.1.43
+    - jinja2 >=3.1.4
+    - requests >=2.32.3
   run_constrained:
 # Database
 # ------------------------------------------------------------------------------
-    - postgresql >=10.0,<16.0
-    - sqlite >=3.40.0,<4.0
-    - psycopg-c >=3.1.0,<4.0
+    - postgresql >=12.0,<17.0
+    - sqlite >=3.46.0
+    - psycopg-c >=3.2.1
+    - psycopg >=3.2.1
 # Docs
 # ------------------------------------------------------------------------------
-    - sphinx >=7.2.6,<8.0
-    - sphinx-rtd-theme >=1.3.0,<2.0
-    - myst-parser >=2.0.0,<3.0
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/docs/requirements.txt
+    - sphinx >=7.4.7
+    - sphinx-rtd-theme >=2.0.0
+    - myst-parser >=4.0.0
 # Docker
 # ------------------------------------------------------------------------------
     - docker-py >=6.0.0
