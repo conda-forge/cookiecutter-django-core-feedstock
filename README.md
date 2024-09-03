@@ -1,5 +1,5 @@
-About cookiecutter-django-core-feedstock
-========================================
+About cookiecutter-django-feedstock
+===================================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cookiecutter-django-core-feedstock/blob/main/LICENSE.txt)
 
@@ -37,53 +37,53 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cookiecutter--django--core-green.svg)](https://anaconda.org/conda-forge/cookiecutter-django-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cookiecutter-django-core.svg)](https://anaconda.org/conda-forge/cookiecutter-django-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cookiecutter-django-core.svg)](https://anaconda.org/conda-forge/cookiecutter-django-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cookiecutter-django-core.svg)](https://anaconda.org/conda-forge/cookiecutter-django-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cookiecutter--django-green.svg)](https://anaconda.org/conda-forge/cookiecutter-django) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cookiecutter-django.svg)](https://anaconda.org/conda-forge/cookiecutter-django) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cookiecutter-django.svg)](https://anaconda.org/conda-forge/cookiecutter-django) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cookiecutter-django.svg)](https://anaconda.org/conda-forge/cookiecutter-django) |
 
-Installing cookiecutter-django-core
-===================================
+Installing cookiecutter-django
+==============================
 
-Installing `cookiecutter-django-core` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `cookiecutter-django` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cookiecutter-django-core` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cookiecutter-django` can be installed with `conda`:
 
 ```
-conda install cookiecutter-django-core
-```
-
-or with `mamba`:
-
-```
-mamba install cookiecutter-django-core
-```
-
-It is possible to list all of the versions of `cookiecutter-django-core` available on your platform with `conda`:
-
-```
-conda search cookiecutter-django-core --channel conda-forge
+conda install cookiecutter-django
 ```
 
 or with `mamba`:
 
 ```
-mamba search cookiecutter-django-core --channel conda-forge
+mamba install cookiecutter-django
+```
+
+It is possible to list all of the versions of `cookiecutter-django` available on your platform with `conda`:
+
+```
+conda search cookiecutter-django --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search cookiecutter-django --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search cookiecutter-django-core --channel conda-forge
+mamba repoquery search cookiecutter-django --channel conda-forge
 
-# List packages depending on `cookiecutter-django-core`:
-mamba repoquery whoneeds cookiecutter-django-core --channel conda-forge
+# List packages depending on `cookiecutter-django`:
+mamba repoquery whoneeds cookiecutter-django --channel conda-forge
 
-# List dependencies of `cookiecutter-django-core`:
-mamba repoquery depends cookiecutter-django-core --channel conda-forge
+# List dependencies of `cookiecutter-django`:
+mamba repoquery depends cookiecutter-django --channel conda-forge
 ```
 
 
@@ -128,17 +128,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating cookiecutter-django-core-feedstock
-===========================================
+Updating cookiecutter-django-feedstock
+======================================
 
-If you would like to improve the cookiecutter-django-core recipe or build a new
+If you would like to improve the cookiecutter-django recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/cookiecutter-django-core-feedstock are
+Note that all branches in the conda-forge/cookiecutter-django-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
