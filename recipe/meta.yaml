@@ -1,4 +1,4 @@
-{% set name = "cookiecutter-django-core" %}
+{% set name = "cookiecutter-django" %}
 {% set version = "2024.08.30" %}
 
 package:
@@ -50,12 +50,44 @@ requirements:
     - gitpython >=3.1.43
     - jinja2 >=3.1.4
     - requests >=2.32.3
+# Base Not Optional ; Limit to Django LTS and Include DRF, Redis and Asyc
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
+    - python-slugify >=8.0.4  # https://github.com/un33k/python-slugify
+    - pillow >=10.4.0  # https://github.com/python-pillow/Pillow
+    - argon2-cffi >=23.1.0  # https://github.com/hynek/argon2_cffi
+    - redis-py >=5.0.8  # https://github.com/redis/redis-py
+# Base
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
+# ------------------------------------------------------------------------------
+    - django >=4.2.15,<5.0  # https://www.djangoproject.com/
+    - django-environ >=0.11.2  # https://github.com/joke2k/django-environ
+    - django-model-utils >=4.5.1  # https://github.com/jazzband/django-model-utils
+    - django-allauth >=64.2.0  # https://github.com/pennersr/django-allauth
+    - django-crispy-forms >=2.3  # https://github.com/django-crispy-forms/django-crispy-forms
+    - crispy-bootstrap5 >=2024.2  # https://github.com/django-crispy-forms/crispy-bootstrap5
+    - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
+# Base - # Django REST Framework
+    - djangorestframework >=3.15.2  # https://github.com/encode/django-rest-framework
+    - django-cors-headers >=4.4.0  # https://github.com/adamchainz/django-cors-headers
+# Base - # DRF-spectacular for api documentation
+    - drf-spectacular >=0.27.2  # https://github.com/tfranzel/drf-spectacular
+# Base - # Use Async
+    - uvicorn-standard >=0.30.6  # https://github.com/encode/uvicorn
+    - uvicorn-worker >=0.2.0  # [not win]  # https://github.com/Kludex/uvicorn-worker
+# Local
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
+    - psycopg-c >=3.2.1  # https://github.com/psycopg/psycopg
+# ------------------------------------------------------------------------------
+# Production
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/production.txt
+# ------------------------------------------------------------------------------
+    - gunicorn >=23.0.0  # [not win]  # https://github.com/benoitc/gunicorn
   run_constrained:
 # Database
 # ------------------------------------------------------------------------------
     - postgresql >=12.0,<17.0
     - sqlite >=3.46.0
-    - psycopg-c >=3.2.1
+    #- psycopg-c >=3.2.1
     - psycopg >=3.2.1
 # Docs
 # ------------------------------------------------------------------------------
