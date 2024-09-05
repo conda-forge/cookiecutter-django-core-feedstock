@@ -59,7 +59,7 @@ requirements:
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
 # ------------------------------------------------------------------------------
-    - django >=4.2.15,<5.0  # https://www.djangoproject.com/
+    - django >=4.2.16,<5.0  # https://www.djangoproject.com/
     - django-environ >=0.11.2  # https://github.com/joke2k/django-environ
     - django-model-utils >=4.5.1  # https://github.com/jazzband/django-model-utils
     - django-allauth >=64.2.0  # https://github.com/pennersr/django-allauth
