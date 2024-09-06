@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2024.08.30" %}
+{% set version = "2024.09.04" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: b09ba33a9e670b17094fcf3ccce19aa228dd085c560ac896ad515dae0fe7c63f
+  sha256: 00c87ac0501ecc0a8a01f7ce8e4b81a4938429a1fcb8db1ec657c2acb247c019
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -59,9 +59,9 @@ requirements:
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
 # ------------------------------------------------------------------------------
-    - django >=4.2.15,<5.0  # https://www.djangoproject.com/
+    - django >=4.2.16,<5.0  # https://www.djangoproject.com/
     - django-environ >=0.11.2  # https://github.com/joke2k/django-environ
-    - django-model-utils >=4.5.1  # https://github.com/jazzband/django-model-utils
+    - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
     - django-allauth >=64.2.0  # https://github.com/pennersr/django-allauth
     - django-crispy-forms >=2.3  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2024.2  # https://github.com/django-crispy-forms/crispy-bootstrap5
