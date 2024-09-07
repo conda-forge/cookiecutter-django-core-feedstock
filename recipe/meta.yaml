@@ -33,7 +33,7 @@ requirements:
 # Code quality
 # ------------------------------------------------------------------------------
     - ruff >=0.6.4
-    - django-upgrade >=1.20.0
+    - django-upgrade >=1.21.0
     - djlint >=1.35.2
     - pre-commit >=3.8.0
 # Testing
