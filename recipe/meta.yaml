@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2024.09.04" %}
+{% set version = "2024.09.07" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 00c87ac0501ecc0a8a01f7ce8e4b81a4938429a1fcb8db1ec657c2acb247c019
+  sha256: 2a4d33bcdf8cbc182f310fdc6009ad2d14b7fa2889107b258362d253369883e6
 
 build:
   noarch: python
