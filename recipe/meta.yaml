@@ -1,5 +1,5 @@
-{% set name = "cookiecutter-django" %}
-{% set version = "2024.09.08" %}
+{% set name = "cookiecutter-django-core" %}
+{% set version = "2024.09.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 0fe65add58b73d28a5e252d7432675f9cbe48c8d9cacbd9dbbbec4b51051d049
+  sha256: d693076056e51553daad74c3ebb9afdca8b2eec58b829c0b5a429d3053a9717f
 
 build:
   noarch: python
@@ -39,7 +39,7 @@ requirements:
 # Testing
 # ------------------------------------------------------------------------------
     - tox >=4.18.0
-    - pytest >=8.3.2
+    - pytest >=8.3.3
     - pytest-xdist >=3.6.1
     - pytest-cookies >=0.7.0
     - pytest-instafail >=0.5.0
@@ -89,6 +89,14 @@ requirements:
     - sqlite >=3.46.0
     #- psycopg-c >=3.2.1
     - psycopg >=3.2.1
+# Local
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
+# Testing
+# ------------------------------------------------------------------------------
+    - mypy >=1.11.2  # https://github.com/python/mypy
+    - django-stubs >=5.0.4  # https://github.com/typeddjango/django-stubs
+    - pytest-sugar >=1.0.0  # https://github.com/Frozenball/pytest-sugar
+    - djangorestframework-stubs >=3.15.1  # https://github.com/typeddjango/djangorestframework-stubs
 # Docs
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/docs/requirements.txt
