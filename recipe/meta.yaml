@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2024.09.17" %}
+{% set version = "2024.10.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 449a480d55a77158d738c9c7075b30d72902ce56cfc08a214ddc8c4e847f54e5
+  sha256: ef824e523fa2f6ea930575873ca1bc4bcbfe009401e034d4fd1d63b7ece01b20
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-# https://github.com/cookiecutter/cookiecutter-django/blob/master/requirements.txt
+# https://github.com/cookiecutter/cookiecutter-django/blob/master/pyproject.toml
 # ------------------------------------------------------------------------------
     - cookiecutter >=2.6.0
     - sh >=2.0.7  # [unix]
@@ -32,14 +32,15 @@ requirements:
     - binaryornot >=0.4.4
 # Code quality
 # ------------------------------------------------------------------------------
-    - ruff >=0.6.4
+    - ruff >=0.7
     - django-upgrade >=1.21.0
     - djlint >=1.35.2
     - pre-commit >=3.8.0
 # Testing
 # ------------------------------------------------------------------------------
-    - tox >=4.18.0
-    - pytest >=8.3.2
+    - tox >=4.21.2
+    - tox-uv >=1.11.2
+    - pytest >=8.3.3
     - pytest-xdist >=3.6.1
     - pytest-cookies >=0.7.0
     - pytest-instafail >=0.5.0
@@ -59,24 +60,24 @@ requirements:
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
 # ------------------------------------------------------------------------------
-    - django >=4.2.16,<5.0  # https://www.djangoproject.com/
+    - django >=4.2.16,<5.1  # https://www.djangoproject.com/
     - django-environ >=0.11.2  # https://github.com/joke2k/django-environ
     - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
-    - django-allauth >=64.2.1  # https://github.com/pennersr/django-allauth
+    - django-allauth >=65.1.0  # https://github.com/pennersr/django-allauth
     - django-crispy-forms >=2.3  # https://github.com/django-crispy-forms/django-crispy-forms
-    - crispy-bootstrap5 >=2024.2  # https://github.com/django-crispy-forms/crispy-bootstrap5
+    - crispy-bootstrap5 >=2024.10  # https://github.com/django-crispy-forms/crispy-bootstrap5
     - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
 # Base - # Django REST Framework
     - djangorestframework >=3.15.2  # https://github.com/encode/django-rest-framework
-    - django-cors-headers >=4.4.0  # https://github.com/adamchainz/django-cors-headers
+    - django-cors-headers >=4.5.0  # https://github.com/adamchainz/django-cors-headers
 # Base - # DRF-spectacular for api documentation
     - drf-spectacular >=0.27.2  # https://github.com/tfranzel/drf-spectacular
 # Base - # Use Async
-    - uvicorn-standard >=0.30.6  # https://github.com/encode/uvicorn
+    - uvicorn-standard >=0.32.0  # https://github.com/encode/uvicorn
     - uvicorn-worker >=0.2.0  # [not win]  # https://github.com/Kludex/uvicorn-worker
 # Local
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
-    - psycopg-c >=3.2.1  # https://github.com/psycopg/psycopg
+    - psycopg-c >=3.2.3  # https://github.com/psycopg/psycopg
 # ------------------------------------------------------------------------------
 # Production
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/production.txt
@@ -92,7 +93,8 @@ requirements:
 # Docs
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/docs/requirements.txt
-    - sphinx >=7.4.7
+    - sphinx >=8.0.2
+    - sphinx-autobuild >=2024.10.3
     - sphinx-rtd-theme >=2.0.0
     - myst-parser >=4.0.0
 # Docker
