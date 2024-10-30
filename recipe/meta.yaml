@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8,<3.13
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >=3.8,<3.13
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/pyproject.toml
 # ------------------------------------------------------------------------------
     - cookiecutter >=2.6.0
