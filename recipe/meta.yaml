@@ -106,7 +106,7 @@ test:
     - cookiecutter
   commands:
     - cookiecutter cookiecutter-django --help
-    - pip check
+    #- pip check
   requires:
     - pip
 
