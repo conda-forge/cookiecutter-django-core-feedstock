@@ -1,5 +1,6 @@
 {% set name = "cookiecutter-django" %}
 {% set version = "2024.11.27" %}
+{% set python_min = python_min|default("3.9") %}
 
 package:
   name: {{ name|lower }}
@@ -106,7 +107,7 @@ requirements:
 # ------------------------------------------------------------------------------
     - postgresql >=12.0,<17.0
     - sqlite >=3.46.0
-    - psycopg-c >=3.2.3  # https://github.com/psycopg/psycopg
+    - psycopg-c >=3.2.3
     
 # Docs
 # ------------------------------------------------------------------------------
