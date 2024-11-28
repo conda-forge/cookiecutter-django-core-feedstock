@@ -1,6 +1,6 @@
 {% set name = "cookiecutter-django" %}
 {% set version = "2024.11.27" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.13
+    - python >=3.8,<3.13
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/pyproject.toml
 # ------------------------------------------------------------------------------
     - cookiecutter >=2.6.0
