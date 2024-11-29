@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2024.11.27" %}
+{% set version = "2024.11.28" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 7a07c30a2133266c393340c5480afef68c5964f59d30416b3c3373710a6619f7
+  sha256: 4d40aec238daa6f1f5e047c4435201398343d964849cf1a08e7d9ab95cad38d6
 
 build:
   noarch: python
@@ -108,7 +108,7 @@ requirements:
     - postgresql >=12.0,<17.0
     - sqlite >=3.46.0
     - psycopg-c >=3.2.3
-    
+
 # Docs
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/docs/requirements.txt
