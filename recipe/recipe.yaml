@@ -30,10 +30,11 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }},<${{ python_max }}
+    - __${{ noarch_platform }}
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/pyproject.toml
     # ------------------------------------------------------------------------------
     - cookiecutter >=2.6.0
-    - if: unix
+    - if: noarch_platform == "unix"
       then:
         - sh >=2.1
     - binaryornot >=0.4.4
@@ -81,7 +82,7 @@ requirements:
     - drf-spectacular >=0.28.0  # https://github.com/tfranzel/drf-spectacular
     # Base - # Use Async
     - uvicorn-standard >=0.34.2  # https://github.com/encode/uvicorn
-    - if: unix
+    - if: noarch_platform == "unix"
       then:
         - uvicorn-worker >=0.3.0  # https://github.com/Kludex/uvicorn-worker
     # Local
@@ -164,13 +165,13 @@ tests:
         - pygithub ==2.5
         - pytest ==8.3.4
         - ruff ==0.11.7
-        - if: unix
+        - if: noarch_platform == "unix"
           then:
             - sh ==2.1
         - tox ==4.23.2
         - tox-uv ==1.19.1
     script:
-      - if: unix
+      - if: noarch_platform == "unix"
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
