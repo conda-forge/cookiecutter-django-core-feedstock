@@ -122,7 +122,7 @@ requirements:
     # ------------------------------------------------------------------------------
     - if: unix
       then:
-        - gunicorn >=23.0.0  # [not win]  # https://github.com/benoitc/gunicorn
+        - gunicorn >=23.0.0  # https://github.com/benoitc/gunicorn
   run_constraints:
     # Database
     # ------------------------------------------------------------------------------
@@ -145,16 +145,16 @@ tests:
       imports:
         - cookiecutter
       pip_check: false
-        #cookiecutter-django 2025.4.30 has requirement django-upgrade==1.22.2, but you have django-upgrade 1.24.0.
-        #cookiecutter-django 2025.4.30 has requirement gitpython==3.1.43, but you have gitpython 3.1.44.
-        #cookiecutter-django 2025.4.30 has requirement jinja2==3.1.5, but you have jinja2 3.1.6.
-        #cookiecutter-django 2025.4.30 has requirement pre-commit==4.1.0, but you have pre-commit 4.2.0.
-        #cookiecutter-django 2025.4.30 has requirement pygithub==2.5, but you have pygithub 2.6.1.
-        #cookiecutter-django 2025.4.30 has requirement pytest==8.3.4, but you have pytest 8.3.5.
-        #cookiecutter-django 2025.4.30 has requirement ruff==0.11.7, but you have ruff 0.11.8.
-        #cookiecutter-django 2025.4.30 has requirement sh==2.1; sys_platform != "win23", but you have sh 2.2.2.
-        #cookiecutter-django 2025.4.30 has requirement tox==4.23.2, but you have tox 4.25.0.
-        #tox-uv 1.25.0 has requirement tox<5,>=4.24.1, but you have tox 4.23.2
+      # cookiecutter-django 2025.4.30 has requirement django-upgrade==1.22.2, but you have django-upgrade 1.24.0.
+      # cookiecutter-django 2025.4.30 has requirement gitpython==3.1.43, but you have gitpython 3.1.44.
+      # cookiecutter-django 2025.4.30 has requirement jinja2==3.1.5, but you have jinja2 3.1.6.
+      # cookiecutter-django 2025.4.30 has requirement pre-commit==4.1.0, but you have pre-commit 4.2.0.
+      # cookiecutter-django 2025.4.30 has requirement pygithub==2.5, but you have pygithub 2.6.1.
+      # cookiecutter-django 2025.4.30 has requirement pytest==8.3.4, but you have pytest 8.3.5.
+      # cookiecutter-django 2025.4.30 has requirement ruff==0.11.7, but you have ruff 0.11.8.
+      # cookiecutter-django 2025.4.30 has requirement sh==2.1; sys_platform != "win23", but you have sh 2.2.2.
+      # cookiecutter-django 2025.4.30 has requirement tox==4.23.2, but you have tox 4.25.0.
+      # tox-uv 1.25.0 has requirement tox<5,>=4.24.1, but you have tox 4.23.2
       python_version:
         - ${{ python_min }}.*
         - ${{ python_test_max }}.*
