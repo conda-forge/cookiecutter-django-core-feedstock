@@ -86,7 +86,9 @@ requirements:
     - drf-spectacular >=0.28.0  # https://github.com/tfranzel/drf-spectacular
     # Base - # Use Async
     - uvicorn-standard >=0.34.2  # https://github.com/encode/uvicorn
-    - uvicorn-worker >=0.3.0  # [not win]  # https://github.com/Kludex/uvicorn-worker
+    - if: unix
+      then:
+        - uvicorn-worker >=0.3.0  # https://github.com/Kludex/uvicorn-worker
     # Local
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
     - psycopg >=3.2.7  # https://github.com/psycopg/psycopg
@@ -118,7 +120,9 @@ requirements:
     # Production
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/production.txt
     # ------------------------------------------------------------------------------
-    - gunicorn >=23.0.0  # [not win]  # https://github.com/benoitc/gunicorn
+    - if: unix
+      then:
+        - gunicorn >=23.0.0  # [not win]  # https://github.com/benoitc/gunicorn
   run_constraints:
     # Database
     # ------------------------------------------------------------------------------
