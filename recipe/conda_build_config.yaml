@@ -1,3 +1,5 @@
 noarch_platform:
   - unix # [unix]
   - win # [win]
+  - linux # [linux]
+  - osx # [osx]
