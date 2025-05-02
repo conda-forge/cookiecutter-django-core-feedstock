@@ -36,11 +36,6 @@ requirements:
     - if: unix
       then:
         - sh >=2.1
-
-    # Keep the package noarch but allow for the osx and linux only dep
-    #- __linux  # [linux]
-    #- __osx    # [osx]
-    #- __win    # [win]
     - binaryornot >=0.4.4
     # Code quality
     # ------------------------------------------------------------------------------
