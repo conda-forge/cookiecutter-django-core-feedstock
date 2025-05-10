@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2025.05.02" %}
+{% set version = "2025.05.09" %}
 {% set python_min = "3.12" %}
 
 {% set cookiecutter = "{{cookiecutter" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 4a616ee50b6e8ed4ca01b06e73d766fec1c74e4a5fb7622afb784739b38e6e71
+  sha256: dab559801c67b4c8df2d739444a1dc390c9ef2e3db3aed4959fd96fe714d673a
 
 build:
   noarch: python
@@ -67,7 +67,7 @@ requirements:
     - django >=4.2.20,<5.3  # https://www.djangoproject.com/
     - django-environ >=0.12.0  # https://github.com/joke2k/django-environ
     - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
-    - django-allauth >=65.7.0  # https://github.com/pennersr/django-allauth
+    - django-allauth >=65.8.0  # https://github.com/pennersr/django-allauth
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
     - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
@@ -102,7 +102,7 @@ requirements:
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt#L36C
     - factory_boy >=3.3.2  # https://github.com/FactoryBoy/factory_boy
-    - django-debug-toolbar >=5.1.0  # https://github.com/jazzband/django-debug-toolbar
+    - django-debug-toolbar >=5.2.0  # https://github.com/jazzband/django-debug-toolbar
     - django-extensions >=4.1  # https://github.com/django-extensions/django-extensions
     - django_coverage_plugin >=3.1.0  # https://github.com/nedbat/django_coverage_plugin
     - pytest-django >=4.11.1  # https://github.com/pytest-dev/pytest-django
