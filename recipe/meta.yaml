@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2025.05.12" %}
+{% set version = "2025.05.13" %}
 {% set python_min = "3.12" %}
 
 {% set cookiecutter = "{{cookiecutter" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: 638efe53456fb5ae22df52411c62c973e4f7d360964c36b41a09fdca9095533d
+  sha256: 08e8088cc435732d679cfba715e5402ce42621f641c45abb3b3aa5bbbee533c7
 
 build:
   noarch: python
