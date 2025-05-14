@@ -60,7 +60,7 @@ requirements:
     - python-slugify >=8.0.4  # https://github.com/un33k/python-slugify
     - pillow >=11.1.0  # https://github.com/python-pillow/Pillow
     - argon2-cffi >=23.1.0  # https://github.com/hynek/argon2_cffi
-    - redis-py >=6.0.0  # https://github.com/redis/redis-py
+    - redis-py >=6.1.0  # https://github.com/redis/redis-py
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
 # ------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ requirements:
     - uvicorn-worker >=0.3.0  # [not win]  # https://github.com/Kludex/uvicorn-worker
 # Local
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
-    - psycopg >=3.2.8  # https://github.com/psycopg/psycopg
+    - psycopg >=3.2.9  # https://github.com/psycopg/psycopg
     - werkzeug >=3.1.3  # https://github.com/pallets/werkzeug
     # https://github.com/pallets/werkzeug/blob/main/pyproject.toml#L36C22-L36C27
     - watchdog >=2.3  # https://github.com/pallets/werkzeug
@@ -116,7 +116,7 @@ requirements:
 # ------------------------------------------------------------------------------
     - postgresql >=12.0,<18.0
     - sqlite >=3.46.0
-    - psycopg-c >=3.2.8
+    - psycopg-c >=3.2.9
 # Docs
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/docs/requirements.txt
