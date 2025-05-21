@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2025.05.16" %}
+{% set version = "2025.05.20" %}
 {% set python_min = "3.12" %}
 
 {% set cookiecutter = "{{cookiecutter" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: bd0849719c944f55afb558ab415c61109366354aa3678cc23a6071bd488d3607
+  sha256: a57ad5b23f0c0c92007dbf2c0781c5c662ac35195290ea0329e05510fb933fc4
 
 build:
   noarch: python
@@ -68,6 +68,7 @@ requirements:
     - django-environ >=0.12.0  # https://github.com/joke2k/django-environ
     - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
     - django-allauth >=65.8.0  # https://github.com/pennersr/django-allauth
+    - fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth[mfa] NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
     - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
