@@ -67,8 +67,8 @@ requirements:
     - django >=4.2.20,<5.3  # https://www.djangoproject.com/
     - django-environ >=0.12.0  # https://github.com/joke2k/django-environ
     - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
-    - django-allauth >=65.8.0  # https://github.com/pennersr/django-allauth
-    - fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
+    - django-allauth >=65.8.1  # https://github.com/pennersr/django-allauth
+    #- fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
     - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
@@ -97,7 +97,7 @@ requirements:
 # Local # Code quality
 # ------------------------------------------------------------------------------
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt#L29
-    - coverage >=7.8.0  # https://github.com/nedbat/coveragepy
+    - coverage >=7.8.1  # https://github.com/nedbat/coveragepy
     - djlint >=1.36.3  # https://github.com/Riverside-Healthcare/djLint
 # Local # Django
 # ------------------------------------------------------------------------------
