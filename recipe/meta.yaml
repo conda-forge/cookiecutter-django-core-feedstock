@@ -147,6 +147,7 @@ test:
     #cookiecutter-django 2025.4.30 has requirement sh==2.1; sys_platform != "win23", but you have sh 2.2.2.
     #cookiecutter-django 2025.4.30 has requirement tox==4.23.2, but you have tox 4.25.0.
     #tox-uv 1.25.0 has requirement tox<5,>=4.24.1, but you have tox 4.23.2
+    #fido2 1.1.3 has requirement cryptography!=35,<45,>=2.6, but you have cryptography 45.0.2.
   requires:
     - python {{ python_min }}
     - pip
@@ -160,6 +161,7 @@ test:
     - sh ==2.1  # [unix]
     - tox ==4.23.2
     - tox-uv ==1.19.1
+    - cryptography >=2.6,!=35,<45
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
