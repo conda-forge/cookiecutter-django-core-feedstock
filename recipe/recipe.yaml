@@ -173,7 +173,8 @@ tests:
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
-      - echo "Skip scripts for windows"
+        else:
+          - echo "Skip scripts for windows"
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
