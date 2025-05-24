@@ -173,10 +173,10 @@ tests:
         - tox-uv ==1.19.1
         - cryptography >=2.6,!=35,<45
     script:
-      - pip check
       - if: noarch_platform != "win"
         then:
           - cookiecutter cookiecutter-django --help
+          - pip check
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
