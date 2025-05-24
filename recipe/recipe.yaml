@@ -64,7 +64,7 @@ requirements:
     - python-slugify >=8.0.4  # https://github.com/un33k/python-slugify
     - pillow >=11.1.0  # https://github.com/python-pillow/Pillow
     - argon2-cffi >=23.1.0  # https://github.com/hynek/argon2_cffi
-    - redis-py #>=6.1.0  # https://github.com/redis/redis-py
+    - redis-py >=6.1.0  # https://github.com/redis/redis-py
     # Base
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
     # ------------------------------------------------------------------------------
@@ -141,7 +141,6 @@ tests:
   - python:
       imports:
         - cookiecutter
-      pip_check: false
       # cookiecutter-django 2025.4.30 has requirement django-upgrade==1.22.2, but you have django-upgrade 1.24.0.
       # cookiecutter-django 2025.4.30 has requirement gitpython==3.1.43, but you have gitpython 3.1.44.
       # cookiecutter-django 2025.4.30 has requirement jinja2==3.1.5, but you have jinja2 3.1.6.
@@ -152,9 +151,6 @@ tests:
       # cookiecutter-django 2025.4.30 has requirement sh==2.1; sys_platform != "win23", but you have sh 2.2.2.
       # cookiecutter-django 2025.4.30 has requirement tox==4.23.2, but you have tox 4.25.0.
       # tox-uv 1.25.0 has requirement tox<5,>=4.24.1, but you have tox 4.23.2
-      python_version:
-        - ${{ python_min }}.*
-        - ${{ python_test_max }}.*
   - requirements:
       run:
         - python ${{ python_min }}.*
@@ -177,7 +173,7 @@ tests:
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
-      - pip check
+      - echo "Skip scripts for windows"
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
