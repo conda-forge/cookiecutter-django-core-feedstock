@@ -13,11 +13,10 @@ Development: https://github.com/cookiecutter/cookiecutter-django
 
 Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
 
-"Powered by Cookiecutter, Cookiecutter Django is a project template for jumpstarting
-production-ready Django projects. The template offers a number of generation options,
-we invite you to check the https://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html#template-options
+"Powered by Cookiecutter, Cookiecutter Django is a project template for jumpstarting 
+production-ready Django projects. The template offers a number of generation options, 
+we invite you to check the https://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html#template-options 
 to learn more about each of them."
-
 
 Current build status
 ====================
