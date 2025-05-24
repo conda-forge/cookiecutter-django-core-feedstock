@@ -177,6 +177,7 @@ tests:
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
+      - pip check
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
