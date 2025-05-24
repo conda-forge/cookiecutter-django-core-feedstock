@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2025.05.22" %}
+{% set version = "2025.05.23" %}
 {% set python_min = "3.12" %}
 
 {% set cookiecutter = "{{cookiecutter" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: c588ed37ce9db609a26b8adcf4cd49fdb6379dcd29468780020dec6d5ff8ff8e
+  sha256: 51a7e9416e2362d101b498abedaf1b8951b1d54c243b1348c21c479ddcac737b
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ requirements:
     - binaryornot >=0.4.4
 # Code quality
 # ------------------------------------------------------------------------------
-    - ruff >=0.11.10
+    - ruff >=0.11.11
     - django-upgrade >=1.22.2
     - djlint >=1.36.4
     - pre-commit >=4.1.0
@@ -157,7 +157,7 @@ test:
     - pre-commit ==4.1.0
     - pygithub ==2.5
     - pytest ==8.3.4
-    - ruff ==0.11.10
+    - ruff ==0.11.11
     - sh ==2.1  # [unix]
     - tox ==4.23.2
     - tox-uv ==1.19.1
