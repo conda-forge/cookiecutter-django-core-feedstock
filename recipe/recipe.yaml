@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: cookiecutter-django
-  version: "2025.05.23"
+  version: "2025.05.24"
   python_min: '3.12'
   python_max: '3.13'
   python_test_max: '3.12'
@@ -16,7 +16,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/${{ version }}.tar.gz
-  sha256: 51a7e9416e2362d101b498abedaf1b8951b1d54c243b1348c21c479ddcac737b
+  sha256: 06461f1069ef01ce78ce9dc37cd28b56e81536eb1691039097f6cce0e4880bea
 
 build:
   number: 1
@@ -152,8 +152,9 @@ tests:
     # cookiecutter-django 2025.4.30 has requirement tox==4.23.2, but you have tox 4.25.0.
     # tox-uv 1.25.0 has requirement tox<5,>=4.24.1, but you have tox 4.23.2
     # fido2 1.1.3 has requirement cryptography!=35,<45,>=2.6, but you have cryptography 45.0.2.
-    #  python_version:
-    #    - ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_test_max }}.*
   - requirements:
       run:
         - python ${{ python_min }}.*
@@ -176,6 +177,13 @@ tests:
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
+        else:
+          - echo "no win"
+      - if: noarch_platform == "win"
+        then:
+          - echo "no win"
+        else:
+          - echo "no win"
 
 about:
   summary: A Cookiecutter template for creating production-ready Django projects quickly
