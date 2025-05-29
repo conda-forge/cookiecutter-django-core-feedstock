@@ -1,5 +1,5 @@
 {% set name = "cookiecutter-django" %}
-{% set version = "2025.05.27" %}
+{% set version = "2025.05.28" %}
 {% set python_min = "3.12" %}
 
 {% set cookiecutter = "{{cookiecutter" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/{{ version }}.tar.gz
-  sha256: ea88276eb0c82078d4ea1d7ec5cd3314aa49b2173ead636790f1207c7ec48dad
+  sha256: af5ac5f49843ee244f150094824ae5bcbbe45e7400519f99d668d5ebac25a799
 
 build:
   noarch: python
@@ -60,7 +60,7 @@ requirements:
     - python-slugify >=8.0.4  # https://github.com/un33k/python-slugify
     - pillow >=11.1.0  # https://github.com/python-pillow/Pillow
     - argon2-cffi >=23.1.0  # https://github.com/hynek/argon2_cffi
-    - redis-py >=6.1.0  # https://github.com/redis/redis-py
+    - redis-py >=6.2.0  # https://github.com/redis/redis-py
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
 # ------------------------------------------------------------------------------
