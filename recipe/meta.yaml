@@ -36,7 +36,7 @@ requirements:
     - binaryornot >=0.4.4
 # Code quality
 # ------------------------------------------------------------------------------
-    - ruff >=0.11.11
+    - ruff >=0.11.12
     - django-upgrade >=1.22.2
     - djlint >=1.36.4
     - pre-commit >=4.1.0
@@ -44,7 +44,7 @@ requirements:
 # ------------------------------------------------------------------------------
     - tox >=4.23.2
     - tox-uv >=1.17.0
-    - pytest >=8.3.4
+    - pytest >=8.4.0
     - pytest-xdist >=3.6.1
     - pytest-cookies >=0.7.0
     - pytest-instafail >=0.5.0
@@ -59,7 +59,7 @@ requirements:
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
     - python-slugify >=8.0.4  # https://github.com/un33k/python-slugify
     - pillow >=11.1.0  # https://github.com/python-pillow/Pillow
-    - argon2-cffi >=23.1.0  # https://github.com/hynek/argon2_cffi
+    - argon2-cffi >=25.1.0  # https://github.com/hynek/argon2_cffi
     - redis-py >=6.2.0  # https://github.com/redis/redis-py
 # Base
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/base.txt
@@ -67,7 +67,7 @@ requirements:
     - django >=4.2.20,<5.3  # https://www.djangoproject.com/
     - django-environ >=0.12.0  # https://github.com/joke2k/django-environ
     - django-model-utils >=5.0.0  # https://github.com/jazzband/django-model-utils
-    - django-allauth >=65.8.1  # https://github.com/pennersr/django-allauth
+    - django-allauth >=65.9.0  # https://github.com/pennersr/django-allauth
     #- fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
@@ -78,7 +78,7 @@ requirements:
 # Base - # DRF-spectacular for api documentation
     - drf-spectacular >=0.28.0  # https://github.com/tfranzel/drf-spectacular
 # Base - # Use Async
-    - uvicorn-standard >=0.34.2  # https://github.com/encode/uvicorn
+    - uvicorn-standard >=0.34.3  # https://github.com/encode/uvicorn
     - uvicorn-worker >=0.3.0  # [not win]  # https://github.com/Kludex/uvicorn-worker
 # Local
 # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
@@ -157,9 +157,9 @@ test:
     - jinja2 ==3.1.5
     - pre-commit ==4.1.0
     - pygithub ==2.5
-    - pytest ==8.3.4
+    - pytest ==8.4.0
     - pytest-xdist ==3.6.1
-    - ruff ==0.11.11
+    - ruff ==0.11.12
     - sh ==2.1  # [unix]
     - tox ==4.23.2
     - tox-uv ==1.19.1
