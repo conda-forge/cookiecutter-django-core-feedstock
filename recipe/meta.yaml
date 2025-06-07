@@ -36,7 +36,7 @@ requirements:
     - binaryornot >=0.4.4
 # Code quality
 # ------------------------------------------------------------------------------
-    - ruff >=0.11.12
+    - ruff >=0.11.13
     - django-upgrade >=1.22.2
     - djlint >=1.36.4
     - pre-commit >=4.1.0
@@ -159,7 +159,7 @@ test:
     - pygithub ==2.5
     - pytest ==8.3.4
     - pytest-xdist ==3.6.1
-    - ruff ==0.11.12
+    - ruff ==0.11.13
     - sh ==2.1  # [unix]
     - tox ==4.23.2
     - tox-uv ==1.19.1
