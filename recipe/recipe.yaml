@@ -93,7 +93,7 @@ requirements:
     # https://github.com/pallets/werkzeug/blob/main/pyproject.toml#L36C22-L36C27
     - watchdog >=2.3  # https://github.com/pallets/werkzeug
     - ipdb >=0.13.13  # https://github.com/gotcha/ipdb
-    - watchfiles >=1.0.5  # https://github.com/samuelcolvin/watchfiles
+    - watchfiles >=1.1.0  # https://github.com/samuelcolvin/watchfiles
     # Local # Testing
     - mypy >=1.15.0  # https://github.com/python/mypy
     - django-stubs >=5.2.0  # https://github.com/typeddjango/django-stubs
@@ -103,7 +103,7 @@ requirements:
     # Local # Code quality
     # ------------------------------------------------------------------------------
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt#L29
-    - coverage >=7.9.0  # https://github.com/nedbat/coveragepy
+    - coverage >=7.9.1  # https://github.com/nedbat/coveragepy
     - djlint >=1.36.3  # https://github.com/Riverside-Healthcare/djLint
     # Local # Django
     # ------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ requirements:
     - factory_boy >=3.3.2  # https://github.com/FactoryBoy/factory_boy
     - django-debug-toolbar >=5.2.0  # https://github.com/jazzband/django-debug-toolbar
     - django-extensions >=4.1  # https://github.com/django-extensions/django-extensions
-    - django_coverage_plugin >=3.1.0  # https://github.com/nedbat/django_coverage_plugin
+    - django_coverage_plugin >=3.1.1  # https://github.com/nedbat/django_coverage_plugin
     - pytest-django >=4.11.1  # https://github.com/pytest-dev/pytest-django
     # ------------------------------------------------------------------------------
     # Production
