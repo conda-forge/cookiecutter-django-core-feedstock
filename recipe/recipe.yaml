@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: cookiecutter-django
-  version: "2025.06.13"
+  version: "2025.06.17"
   python_min: '3.12'
   python_max: '4.0'
   python_test_max: '3.13'
@@ -16,10 +16,10 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/${{ version }}.tar.gz
-  sha256: 791c9442aed18881c71a68f0856890a979e7a6a7ff4daf64a1f3855ae03acda5
+  sha256: 679b09bede025417e5c3ea93d641fdb3982233916ba6ef31b5eaa8e2bbd200fb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -93,7 +93,7 @@ requirements:
     # https://github.com/pallets/werkzeug/blob/main/pyproject.toml#L36C22-L36C27
     - watchdog >=2.3  # https://github.com/pallets/werkzeug
     - ipdb >=0.13.13  # https://github.com/gotcha/ipdb
-    - watchfiles >=1.0.5  # https://github.com/samuelcolvin/watchfiles
+    - watchfiles >=1.1.0  # https://github.com/samuelcolvin/watchfiles
     # Local # Testing
     - mypy >=1.15.0  # https://github.com/python/mypy
     - django-stubs >=5.2.0  # https://github.com/typeddjango/django-stubs
@@ -103,7 +103,7 @@ requirements:
     # Local # Code quality
     # ------------------------------------------------------------------------------
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt#L29
-    - coverage >=7.9.0  # https://github.com/nedbat/coveragepy
+    - coverage >=7.9.1  # https://github.com/nedbat/coveragepy
     - djlint >=1.36.3  # https://github.com/Riverside-Healthcare/djLint
     # Local # Django
     # ------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ requirements:
     - factory_boy >=3.3.2  # https://github.com/FactoryBoy/factory_boy
     - django-debug-toolbar >=5.2.0  # https://github.com/jazzband/django-debug-toolbar
     - django-extensions >=4.1  # https://github.com/django-extensions/django-extensions
-    - django_coverage_plugin >=3.1.0  # https://github.com/nedbat/django_coverage_plugin
+    - django_coverage_plugin >=3.1.1  # https://github.com/nedbat/django_coverage_plugin
     - pytest-django >=4.11.1  # https://github.com/pytest-dev/pytest-django
     # ------------------------------------------------------------------------------
     # Production
@@ -147,43 +147,43 @@ tests:
           - echo "no win tests"
     requirements:
       run:
-      - if: noarch_platform != "win"
-        then:
-          - python >=${{ python_min }},<${{ python_max }}
-          - pip
-          - django-upgrade ==1.22.2
-          - gitpython ==3.1.43
-          - jinja2 ==3.1.5
-          - pre-commit ==4.1.0
-          - pygithub ==2.5
-          - pytest ==8.3.4
-          - pytest-xdist ==3.6.1
-          - ruff ==0.11.13
-          - if: noarch_platform != "win"
-            then:
-              - sh ==2.1
-          - tox ==4.23.2
-          - tox-uv ==1.19.1
-          - cryptography >=2.6,!=35,<45
-          - requests ==2.32.3
-        else:
-          - python >=${{ python_min }},<${{ python_max }}
-          - pip
-          - django-upgrade ==1.22.2
-          - gitpython ==3.1.43
-          - jinja2 ==3.1.5
-          - pre-commit ==4.1.0
-          - pygithub ==2.5
-          - pytest ==8.3.4
-          - pytest-xdist ==3.6.1
-          - ruff ==0.11.13
-          - if: noarch_platform != "win"
-            then:
-              - sh ==2.1
-          - tox ==4.23.2
-          - tox-uv ==1.19.1
-          - cryptography >=2.6,!=35,<45
-          - requests ==2.32.3
+        - if: noarch_platform != "win"
+          then:
+            - python >=${{ python_min }},<${{ python_max }}
+            - pip
+            - django-upgrade ==1.22.2
+            - gitpython ==3.1.43
+            - jinja2 ==3.1.5
+            - pre-commit ==4.1.0
+            - pygithub ==2.5
+            - pytest ==8.3.4
+            - pytest-xdist ==3.6.1
+            - ruff ==0.11.13
+            - if: noarch_platform != "win"
+              then:
+                - sh ==2.1
+            - tox ==4.23.2
+            - tox-uv ==1.19.1
+            - cryptography >=2.6,!=35,<45
+            - requests ==2.32.3
+          else:
+            - python >=${{ python_min }},<${{ python_max }}
+            - pip
+            - django-upgrade ==1.22.2
+            - gitpython ==3.1.43
+            - jinja2 ==3.1.5
+            - pre-commit ==4.1.0
+            - pygithub ==2.5
+            - pytest ==8.3.4
+            - pytest-xdist ==3.6.1
+            - ruff ==0.11.13
+            - if: noarch_platform != "win"
+              then:
+                - sh ==2.1
+            - tox ==4.23.2
+            - tox-uv ==1.19.1
+            - cryptography >=2.6,!=35,<45
+            - requests ==2.32.3
   - python:
       imports:
         - cookiecutter
