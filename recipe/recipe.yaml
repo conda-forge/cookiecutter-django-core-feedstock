@@ -3,12 +3,12 @@ schema_version: 1
 
 context:
   name: cookiecutter-django
-  version: "2025.06.17"
+  version: "2025.06.18"
   python_min: '3.12'
   python_max: '4.0'
   python_test_max: '3.13'
-  cookiecutter: "{{cookiecutter"
-  project_slug: "project_slug}}"
+  #cookiecutter: "{{cookiecutter"
+  #project_slug: "project_slug}}"
 
 package:
   name: ${{ name|lower }}
@@ -16,7 +16,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/${{ version }}.tar.gz
-  sha256: 679b09bede025417e5c3ea93d641fdb3982233916ba6ef31b5eaa8e2bbd200fb
+  sha256: 6055315e2b309fbf3db63a9f009f966e993582c64ffc1e82e123a644db564aa9
 
 build:
   number: 0
@@ -34,13 +34,18 @@ requirements:
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/pyproject.toml
     # ------------------------------------------------------------------------------
     - cookiecutter >=2.6.0
-    - if: noarch_platform != "win"
+    - if: noarch_platform == "linux"
       then:
+        - __linux
+        - sh >=2.1
+    - if: noarch_platform == "osx"
+      then:
+        - __osx
         - sh >=2.1
     - binaryornot >=0.4.4
     # Code quality
     # ------------------------------------------------------------------------------
-    - ruff >=0.11.13
+    - ruff >=0.12.0
     - django-upgrade >=1.22.2
     - djlint >=1.36.4
     - pre-commit >=4.1.0
@@ -75,7 +80,7 @@ requirements:
     #- fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
-    - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
+    - django-redis >=6.0.0  # https://github.com/jazzband/django-redis
     # Base - # Django REST Framework
     - djangorestframework >=3.16.0  # https://github.com/encode/django-rest-framework
     - django-cors-headers >=4.7.0  # https://github.com/adamchainz/django-cors-headers
@@ -83,8 +88,13 @@ requirements:
     - drf-spectacular >=0.28.0  # https://github.com/tfranzel/drf-spectacular
     # Base - # Use Async
     - uvicorn-standard >=0.34.3  # https://github.com/encode/uvicorn
-    - if: noarch_platform != "win"
+    - if: noarch_platform == "linux"
       then:
+        - __linux
+        - uvicorn-worker >=0.3.0  # https://github.com/Kludex/uvicorn-worker
+    - if: noarch_platform == "osx"
+      then:
+        - __osx
         - uvicorn-worker >=0.3.0  # https://github.com/Kludex/uvicorn-worker
     # Local
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt
@@ -117,8 +127,13 @@ requirements:
     # Production
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/production.txt
     # ------------------------------------------------------------------------------
-    - if: noarch_platform != "win"
+    - if: noarch_platform == "linux"
       then:
+        - __linux
+        - gunicorn >=23.0.0  # https://github.com/benoitc/gunicorn
+    - if: noarch_platform == "osx"
+      then:
+        - __osx
         - gunicorn >=23.0.0  # https://github.com/benoitc/gunicorn
   run_constraints:
     # Database
@@ -139,7 +154,7 @@ requirements:
 
 tests:
   - script:
-      - if: noarch_platform != "win"
+      - if: noarch_platform == "linux"
         then:
           - cookiecutter cookiecutter-django --help
           - pip check
@@ -147,7 +162,7 @@ tests:
           - echo "no win tests"
     requirements:
       run:
-        - if: noarch_platform != "win"
+        - if: noarch_platform == "linux"
           then:
             - python >=${{ python_min }},<${{ python_max }}
             - pip
@@ -158,10 +173,11 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
-            - if: noarch_platform != "win"
+            - ruff ==0.12.0
+            - if: noarch_platform == "linux"
               then:
                 - sh ==2.1
+                - __linux
             - tox ==4.23.2
             - tox-uv ==1.19.1
             - cryptography >=2.6,!=35,<45
@@ -176,10 +192,11 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
-            - if: noarch_platform != "win"
+            - ruff ==0.12.0
+            - if: noarch_platform == "osx"
               then:
                 - sh ==2.1
+                - __osx
             - tox ==4.23.2
             - tox-uv ==1.19.1
             - cryptography >=2.6,!=35,<45
