@@ -7,8 +7,8 @@ context:
   python_min: '3.12'
   python_max: '4.0'
   python_test_max: '3.13'
-  cookiecutter: "{{cookiecutter"
-  project_slug: "project_slug}}"
+  #cookiecutter: "{{cookiecutter"
+  #project_slug: "project_slug}}"
 
 package:
   name: ${{ name|lower }}
