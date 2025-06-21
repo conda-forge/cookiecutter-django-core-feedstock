@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: cookiecutter-django
-  version: "2025.06.17"
+  version: "2025.06.19"
   python_min: '3.12'
   python_max: '4.0'
   python_test_max: '3.13'
@@ -16,7 +16,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/${{ version }}.tar.gz
-  sha256: 679b09bede025417e5c3ea93d641fdb3982233916ba6ef31b5eaa8e2bbd200fb
+  sha256: fc56cdffd13eea33d234ea94fcb896a44e4424c5a7d6c040cacdcfa7b11e1cf4
 
 build:
   number: 0
@@ -75,7 +75,7 @@ requirements:
     #- fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
-    - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
+    - django-redis >=6.0.0  # https://github.com/jazzband/django-redis
     # Base - # Django REST Framework
     - djangorestframework >=3.16.0  # https://github.com/encode/django-rest-framework
     - django-cors-headers >=4.7.0  # https://github.com/adamchainz/django-cors-headers
@@ -96,7 +96,7 @@ requirements:
     - watchfiles >=1.1.0  # https://github.com/samuelcolvin/watchfiles
     # Local # Testing
     - mypy >=1.15.0  # https://github.com/python/mypy
-    - django-stubs >=5.2.0  # https://github.com/typeddjango/django-stubs
+    - django-stubs >=5.2.1  # https://github.com/typeddjango/django-stubs
     - pytest-sugar >=1.0.0  # https://github.com/Teemu/pytest-sugar
     - djangorestframework-stubs >=3.16.0  # https://github.com/typeddjango/djangorestframework-stubs
     # Local # Documentation
@@ -158,7 +158,7 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
+            - ruff ==0.12.0
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
@@ -176,7 +176,7 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
+            - ruff ==0.12.0
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
