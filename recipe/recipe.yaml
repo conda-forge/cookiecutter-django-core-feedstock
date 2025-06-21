@@ -48,7 +48,7 @@ requirements:
     # ------------------------------------------------------------------------------
     - tox >=4.23.2
     - tox-uv >=1.17.0
-    - pytest >=8.3.4
+    - pytest >=8.4.1
     - pytest-xdist >=3.6.1
     - pytest-cookies >=0.7.0
     - pytest-instafail >=0.5.0
@@ -75,7 +75,7 @@ requirements:
     #- fido2 <2  # https://github.com/Yubico/python-fido2 - dependency of django-allauth mfa NOTE https://github.com/cookiecutter/cookiecutter-django/pull/5854
     - django-crispy-forms >=2.4  # https://github.com/django-crispy-forms/django-crispy-forms
     - crispy-bootstrap5 >=2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
-    - django-redis >=5.4.0  # https://github.com/jazzband/django-redis
+    - django-redis >=6.0.0  # https://github.com/jazzband/django-redis
     # Base - # Django REST Framework
     - djangorestframework >=3.16.0  # https://github.com/encode/django-rest-framework
     - django-cors-headers >=4.7.0  # https://github.com/adamchainz/django-cors-headers
@@ -96,7 +96,7 @@ requirements:
     - watchfiles >=1.1.0  # https://github.com/samuelcolvin/watchfiles
     # Local # Testing
     - mypy >=1.15.0  # https://github.com/python/mypy
-    - django-stubs >=5.2.0  # https://github.com/typeddjango/django-stubs
+    - django-stubs >=5.2.1  # https://github.com/typeddjango/django-stubs
     - pytest-sugar >=1.0.0  # https://github.com/Teemu/pytest-sugar
     - djangorestframework-stubs >=3.16.0  # https://github.com/typeddjango/djangorestframework-stubs
     # Local # Documentation
@@ -156,9 +156,9 @@ tests:
             - jinja2 ==3.1.5
             - pre-commit ==4.1.0
             - pygithub ==2.5
-            - pytest ==8.3.4
+            - pytest ==8.4.1
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
+            - ruff ==0.12.0
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
@@ -174,9 +174,9 @@ tests:
             - jinja2 ==3.1.5
             - pre-commit ==4.1.0
             - pygithub ==2.5
-            - pytest ==8.3.4
+            - pytest ==8.4.1
             - pytest-xdist ==3.6.1
-            - ruff ==0.11.13
+            - ruff ==0.12.0
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
