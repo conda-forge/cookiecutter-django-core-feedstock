@@ -40,7 +40,7 @@ requirements:
     - binaryornot >=0.4.4
     # Code quality
     # ------------------------------------------------------------------------------
-    - ruff >=0.12.1
+    - ruff >=0.12.3
     - django-upgrade >=1.22.2
     - djlint >=1.36.4
     - pre-commit >=4.1.0
@@ -158,7 +158,7 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.12.1
+            - ruff ==0.12.3
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
@@ -176,7 +176,7 @@ tests:
             - pygithub ==2.5
             - pytest ==8.3.4
             - pytest-xdist ==3.6.1
-            - ruff ==0.12.1
+            - ruff ==0.12.3
             - if: noarch_platform != "win"
               then:
                 - sh ==2.1
