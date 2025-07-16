@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: cookiecutter-django
-  version: "2025.07.14"
+  version: "2025.07.15"
   python_min: '3.12'
   python_max: '4.0'
   python_test_max: '3.13'
@@ -16,7 +16,7 @@ package:
 
 source:
   url: https://github.com/cookiecutter/cookiecutter-django/archive/${{ version }}.tar.gz
-  sha256: e3157b95faa1693a957665c294448a5de096efb8153cb71fd69f82e6038efa6c
+  sha256: 9a7a57503ad7dd466f56a94c79892e0974555a48d160ceea365c806a303544db
 
 build:
   number: 0
