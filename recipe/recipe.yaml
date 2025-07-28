@@ -103,7 +103,7 @@ requirements:
     # Local # Code quality
     # ------------------------------------------------------------------------------
     # https://github.com/cookiecutter/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/requirements/local.txt#L29
-    - coverage >=7.10.0  # https://github.com/nedbat/coveragepy
+    - coverage >=7.10.1  # https://github.com/nedbat/coveragepy
     - djlint >=1.36.3  # https://github.com/Riverside-Healthcare/djLint
     # Local # Django
     # ------------------------------------------------------------------------------
